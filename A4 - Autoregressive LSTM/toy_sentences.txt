@@ -1,0 +1,306 @@
+mod = RNN('toy', hidden_layer_size=48, embedding_dimension=32, num_layers=1, max_tokens=200, n=50000)
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+mod.to(device)
+optimizer = optim.Adam(mod.parameters(), lr = 0.0001)
+loss = mod.train(optimizer, device, epochs=25, max_length=150)
+
+
+EPOCH 0 ||
+.startt the short da walks but the man walks ).end
+.starta quick mouse goes ( on the nic.end
+.startthe gorgeous bunny ran ( on the person ran a on goes.end
+.starta short gorgeous woman walks but the dowe gors.end
+.startthe bunny ) ) orie wen to pergeony runs with a short bunsy.end
+.starta bunny )u gorgeous person walks ( with the nhers bunny walked while a bunny cat ) wogers person.end
+.starta dog runs ( but t a dog goes ( while the gorgeoes man wmann but a busy person went ( a woman runs.end
+.starta man ).end
+.starta woman ran ( while the on gous person goes a wile.end
+.startthe a busy woman.end
+
+EPOCH 1 ||
+.starta bunny.end
+.startthe woman goes ( on a buiy went while the gorgeous dog goes to a bunny to.end
+.startthe woman walks ( with the short dog walks.end
+.startthe short man ).end
+.startthe nice cat went ( but a woman runs but a man.end
+.starta mouse ran to the cat went ( while a woman walks on the man ran.end
+.startthe short bunny ).end
+.starta bunny.end
+.starta busy person ran ) impatiently.end
+.starta man walked ( on a nice quick bunny ).end
+
+EPOCH 2 ||
+.startthe person runs ( on the mouse ) impatiently ).end
+.startthe dog ran on the dog ) quickly.end
+.startthe man walked ( to the cat ).end
+.starta short cat walked ( to the busy mouse ran while a gorgeous mouse walked ( while a man ran ).end
+.startthe nice dog runs ( but the dog walked ( runt the bunny ran ( on the man ra while the nice cat went ( with the short person ).end
+.startthe dog walks but the gorgeous person went on the nice man ).end
+.startthe busy womauns ).end
+.startthe man runs while the person walks but a dog goes to the nin ca busy griefly.end
+.startthe busy man went to a busy cat ).end
+.startthe quick mouss.end
+
+EPOCH 3 ||
+.startthe person ran ( but a dog goes.end
+.startthe bunny ran but a man walks while a person runs.end
+.startthe man went while a mouse walks while a dog runs quickly impatous persnt on the woman ).end
+.startthe man walks.end
+.starta bunny runs.end
+.starta dog runs to a woman.end
+.startthe gorgeous bunny ran with a gorgeougeous cat.end
+.startthe busy bunny walked to the nice bunny.end
+.startthe dog walks.end
+.starta short person ran ( on a nice cat ) briefly.end
+
+EPOCH 4 ||
+.startthe gorgeous dog ran.end
+.starta nice mouse went with a bunny.end
+.starta mouse walked ( with the quick person ).end
+.starta woman goes ( while the mouse went while a bunny walks while a mouse runs ( on the busy man ) ) ) briefly.end
+.startthe person ran while the man walks.end
+.startthe mouse goes while the person runs quickly ) ).end
+.startthe mouse went quickly.end
+.startthe busy woman went.end
+.startthe short mouse walks while a short dog walks.end
+.startthe nice mouse  runs.end
+
+EPOCH 5 ||
+.starta cat walks ( but the woman walks but a person walks ( while a person went ( but a nice woman runs but buny quickly quickly ).end
+.startthe cat went ( while the cat ran ( on a nice bunny ).end
+.startthe busy man goes ( but a person walks ( on the nice woman ) ).end
+.starta woman runs ( with a cat ) impatiently.end
+.startthe person runs to the busy man.end
+.startthe woman walked ( on the man ).end
+.starta busy woman runs.end
+.starta mouse walked ( while a man ran with the qous briefly.end
+.startthe nice dog goes briefly.end
+.starta busy person runs with the man ).end
+
+EPOCH 6 ||
+.startthe bunny walks.end
+.startthe man ran ( to the bunny ) ) ).end
+.starta nice person walks ( while the busy woman went ( but the woman walks ( while a nice mouse walked on the bunny.end
+.starta busy bunny runs with the busy menn.end
+.startthe quick woman runs with a person.end
+.starta man walked to a mouse quickly ).end
+.startthe woman walked on a quick woman briefly.end
+.starta person walks.end
+.starta person ).end
+.startthe short bunny walks ( to a quick bunny ).end
+
+EPOCH 7 ||
+.starta woman walked with the mouse.end
+.startthe man ran with the dog.end
+.startthe man runs ( with the person ).end
+.startthe nice person went with the person.end
+.startthe nice perons with but woma.end
+.startthe short man walks ( while the mouse runs while the busy bunny goes but a mouse walked ( but the nice man went on a short dog ).end
+.starta dog walks ( to the cat ) briefly.end
+.starta busy person runs ( while a quick mouse walks ( while a person runs ( to the dog ).end
+.startthe short dog went with the mouse.end
+.starta mouse went with a quick cat.end
+
+EPOCH 8 ||
+.startthe gorgeous man went while the gorgeous person walked ( with the dog ) ).end
+.starta person ran ( while a quick man walked ( with the dog ).end
+.starta busy cat walked ( to the short person ).end
+.starta short woman walked while a person walks.end
+.startthe nice dog runs to a person.end
+.startthe gorgeous dog goes impatiently ) briefly.end
+.starta mouse walked with a busy dog impatiently briefly.end
+.starta gorgeous mouse went while the man walks ).end
+.starta mouse walks to a woman.end
+.starta nice woman ran.end
+
+EPOCH 9 ||
+.startthe quick man ran.end
+.starta busy cat went wia busy ) ) ) quickly.end
+.startthe man goes.end
+.starta can ).end
+.starta quick man walked.end
+.startthe person walks ( but a man runs to the nice bunny ).end
+.starta bunny went ( on a busy cat ).end
+.starta woman went with the mouse.end
+.starta quick woman runs with the man.end
+.startthe man walked but a man goes on the short bunny quickly.end
+
+EPOCH 10 ||
+.startthe woman went but the mouse ran to a gorgeous bunny ).end
+.starta busy person runs while the bunny goes while a dog goes while the dog goes ( with the dog ) ) ) quickly.end
+.starta man ran while a gorgeous mouse runs but the busy woman walks.end
+.startthe busy cat ran ( with the person ) quickly.end
+.starta short person walks.end
+.starta man walked but the busy mouse went ( on the gorgeous person ) ) impatiently.end
+.startthe cat goes to the busy woman.end
+.startthe man walked ( while a person went but the short cat walked ( with the nice mouse ).end
+.startthe busy woman walked ( while a gorgeous cat walks with a mouse ).end
+.starta woman walked ( on the gorgeous woman ).end
+
+EPOCH 11 ||
+.starta busy person ran ( but the gorgeous cat walked ).end
+.startthe dog went ( but a man goes while a gorgeous mouse walks.end
+.starta nice mouse goes impatiently ) quickly.end
+.starta quick mouse goes.end
+.starta dog runs while a quick cat walks ( while the gorgeous person walked but a person went while a bunny went ( but the person runs ( while a nice man we
+.starta dog goes on a woman.end
+.starta mouse walked ( while a cat walks ( but the cat walked to the woman ).end
+.starta gorgeous woman went ( to the gorgeous mouse ).end
+.startthe busy mouse ran while the man walks ( with a short cat ).end
+.starta gorgeous man ran ( to a woman ).end
+
+EPOCH 12 ||
+.startthe dog went ( with the quick man ) ).end
+.startthe busy cat goes ( but a gorgeous person walked ( to the short dog ) ).end
+.starta cat walked.end
+.startthe busy mouse runs ( on a short mouse ).end
+.starta man walked.end
+.starta quick woman ran with a gorgeous bunny.end
+.startthe mouse runs ( while a short man went ( with a gorgeous woman ) ).end
+.startthe bunny walks but the dog went ( with a bunny ) impatiently briefly ).end
+.starta person walked ( but the bunny walked with the busy man ).end
+.startthe bunny runs quickly.end
+
+EPOCH 13 ||
+.starta nice mouse went ( on the gorgeous cat ).end
+.starta dog walked to the walks.end
+.starta cat went but the woman walked ( with a busy cat ) quickly.end
+.starta nice dog walked while a gorgeous woman walks ( while the quick man ran ( with the dog ) ).end
+.starta gorgeous woman walks ( but a nice cat goes ( with a woman ) ).end
+.starta gorgeous man runs on the cat.end
+.startthe busy man ran ( with a mouse ).end
+.startthe nice woman walked ( to the mouse impatiently ) ).end
+.startthe quick dog goes ( but the gorgeous dog walked ( on the short cat ) ).end
+.starta busy mouse runs.end
+
+EPOCH 14 ||
+.starta dog goes.end
+.starta quick dog runs.end
+.startthe busy man walked on the person.end
+.starta bunny ran on the gorgeous man.end
+.startthe dog goes ( with a person ).end
+.starta cat walks briefly.end
+.starta dog goes ( to a nice woman ).end
+.startthe dog ran quickly.end
+.starta busy dog runs.end
+.startthe woman goes ( with a busy man ) briefly.end
+
+EPOCH 15 ||
+.starta person ran with a cat.end
+.starta gorgeous woman ran ( but the person walks ( but the woman walked on a nice mouse ).end
+.starta man runs while a bunny runs quickly.end
+.starta person went ( on the cat ).end
+.startthe short mouse went briefly.end
+.startthe gorgeous mouse runs ( but the woman goes ) ).end
+.startthe mouse goes to a bunny.end
+.starta short dog went to a quick woman briefly.end
+.starta man goes ( with the nice cat ).end
+.starta man ran ( on a dog ) ).end
+
+EPOCH 16 ||
+.startthe gorgeous man walks ( while the bunny walks while the person went ( while the dog goes ( with a gorgeous person ).end
+.startthe cat walked briefly.end
+.startthe short woman ran ( on the person ) quickly.end
+.startthe gorgeous person went impatiently.end
+.startthe gorgeous woman ran ( with the gorgeous mouse ).end
+.startthe quick woman walks ( but the bunny walked ) ).end
+.starta woman runs with a person.end
+.starta man walked but a mouse walked ( but a woman went ( while the nice mouse walks on the nice man ).end
+.starta woman walks ( to the cat ) briefly.end
+.starta busy mouse runs.end
+
+EPOCH 17 ||
+.startthe gorgeous dog walks with the gorgeous dog.end
+.startthe person ran ( while a person walked while a person goes ( while a quick man walked ( while the nice woman walks with the bunny ) briefly impatientl
+.startthe quick mouse went ( while a gorgeous man ) ) ).end
+.starta person runs.end
+.starta nice mouse walks ( while the person walks ( but the busy man runs but a cat walks with the nice dog ).end
+.startthe dog walks ( on a bunny ) briefly.end
+.startthe busy woman went ( while the mouse goes but a nice bunny ran ( to the bunny ) ).end
+.starta mouse walked.end
+.starta short dog runs but a gorgeous mouse went on a nice person.end
+.startthe cat runs but the gorgeous person ran.end
+
+EPOCH 18 ||
+.startthe gorgeous bunny runs ( but a man runs ).end
+.starta busy bunny went.end
+.starta quick dog runs to the quick bunny.end
+.startthe gorgeous woman went while the quick cat went ( with a mouse ).end
+.startthe nice man goes ( on a dog ).end
+.starta busy catrs bunny ).end
+.startthe bunny walks ( on a nice dog ).end
+.starta short man walks but the mouse walks ( but a quick cat went on a woman briefly quickly.end
+.startthe busy man goes ( on a quick person ).end
+.startthe bunny goes ( while a gorgeous man goes ( on the mouse ) ).end
+
+EPOCH 19 ||
+.startthe man walks ( while the short mouse ran quickly ) quickly.end
+.starta person walked ( while the dog ran ( to a busy person ) ) ) ).end
+.startthe man walked ( while the woman runs while a quick cat ran ( to the dog ) ).end
+.starta gorgeous bunny ran.end
+.starta bunny went.end
+.starta man ran.end
+.startthe quick mouse walks ( on the bunny ) quickly.end
+.starta nun walked.end
+.starta short mouse walked ( but the person walked ( while a bunny goes ( on the gorgeous woman ).end
+.startthe person went while the cat runs ( while the woman runs ( to a short woman ) ) ).end
+
+EPOCH 20 ||
+.starta woman walks with a man.end
+.starta cat walks ( while the busy dog walked ).end
+.startthe quick person goes ( on the woman ).end
+.startthe nice woman runs with the cat.end
+.startthe busy dog walks but the quick person runs ( but the short woman walks ( with the short man ) ).end
+.startthe short man ran ( while a gorgeous person walks on the person quickly impatiently ).end
+.startthe quick man ran.end
+.starta busy dog runs.end
+.startthe person runs to the busy woman quickly.end
+.startthe gorgeous woman goes on a woman.end
+
+EPOCH 21 ||
+.startthe busy cat walks.end
+.starta man runs on the quick cat.end
+.starta cat walks ( but a short woman ran ( but the man goes ( on the dog ) ).end
+.starta gorgeous person goes.end
+.starta dog ran but a cat runs with the woman.end
+.starta dog walks quickly.end
+.startthe short bunny ran with the person.end
+.startthe cat goes ( with the quick person ).end
+.startthe mouse went.end
+.startthe nice mouse walks to a dog.end
+
+EPOCH 22 ||
+.starta bunny walked ( with a cat ).end
+.starta busy woman went ( to the bunny ).end
+.startthe short man runs ( with a quick woman ).end
+.startthe nice woman walks ( but a cat walks to the nice mouse briefly ) ) ) ).end
+.startthe nice bunny runs quickly.end
+.startthe gorgeous man goes with a person.end
+.startthe quick person walks ( to a gorgeous mouse ).end
+.startthe dog walks ( to a nice bunny ).end
+.starta cat walks ( but a short cat runs while the gorgeous man walked impatiently ) ).end
+.startthe nice cat walks with the bunny.end
+
+EPOCH 23 ||
+.startthe man ran while a short cat walks ( to the dog ) quickly.end
+.starta woman runs but a cat ran while the bunny went ( on the man ).end
+.starta quick man went ( but the to gouse quickly quickly.end
+.starta dog goes but a nice cat goes ( but a person runs but a gorgeous person walked to a short mouse ) briefly.end
+.starta bunny walks ( to the man ).end
+.starta busy bunny walked but a mouse walks.end
+.starta busy person goes ( while a busy person goes with a nice man ).end
+.starta person ran ( on the man ).end
+.startthe short cat ran while the gorgeous cat runs ( while a cat walks ( while the cat goes ( on a cat walked ).end
+.starta person runs to a gorgeous dog impatiently.end
+
+EPOCH 24 ||
+.startthe short cat runs ( with the quick man ).end
+.starta man runs.end
+.starta bunny goes ( with a cat ).end
+.startthe person walks with the short cat.end
+.startthe cat goes on the cat.end
+.startthe gorgeous bunny runs ( to the quick woman ).end
+.startthe woman walked ( to a person ) quickly.end
+.starta short mouse goes but the gorgeous bunny runs.end
+.startthe mouse goes ( on the bunny ).end
+.starta gorgeous bunny runs ( but a nice woman went ).end
